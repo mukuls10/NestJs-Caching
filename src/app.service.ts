@@ -35,7 +35,7 @@ export class AppService {
 
     // console.log(value.length);
 
-    return 'Hello World!';
+    return 'Hello from GCP World!';
   }
 
   // async anotherEndpoint(symbol: string) {
