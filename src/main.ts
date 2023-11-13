@@ -8,7 +8,7 @@ async function bootstrap() {
   // Enable cors, so FE can access it.
   app.enableCors({
     credentials: true,
-    origin: 'http://localhost:3000',
+    origin: 'http://35.244.37.168:3000',
     allowedHeaders: ['authorization', 'cookie', 'content-type'],
   });
 
