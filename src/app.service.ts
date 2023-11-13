@@ -8,38 +8,38 @@ import { data } from 'test';
 
 @Injectable()
 export class AppService {
-  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
+  // constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
   async getHello(): Promise<string> {
-    console.log('get');
-    console.time('setting data');
-    console.log(data.length);
-    // await this.cacheManager.set('test', [
-    //   { a: 'a', b: 2 },
-    //   { c: 'c', d: 'd' },
-    // ]);
-    await this.cacheManager.set('ETH', data);
-    console.log(`sending 150 entries to cache`);
-    for (let i = 0; i < 150; i++) {
-      await this.cacheManager.set(`ETH${i}`, data);
-    }
-    console.log(`sending other 150 entries to cache`);
-    for (let i = 150; i < 300; i++) {
-      await this.cacheManager.set(`ETH${i}`, data);
-    }
-    console.timeEnd('setting data');
+    // console.log('get');
+    // console.time('setting data');
+    // console.log(data.length);
+    // // await this.cacheManager.set('test', [
+    // //   { a: 'a', b: 2 },
+    // //   { c: 'c', d: 'd' },
+    // // ]);
+    // await this.cacheManager.set('ETH', data);
+    // console.log(`sending 150 entries to cache`);
+    // for (let i = 0; i < 150; i++) {
+    //   await this.cacheManager.set(`ETH${i}`, data);
+    // }
+    // console.log(`sending other 150 entries to cache`);
+    // for (let i = 150; i < 300; i++) {
+    //   await this.cacheManager.set(`ETH${i}`, data);
+    // }
+    // console.timeEnd('setting data');
 
-    console.time('getting data');
-    const value: any[] = await this.cacheManager.get('ETH29');
+    // console.time('getting data');
+    // const value: any[] = await this.cacheManager.get('ETH29');
 
-    console.timeEnd('getting data');
+    // console.timeEnd('getting data');
 
-    console.log(value.length);
+    // console.log(value.length);
 
     return 'Hello World!';
   }
 
-  async anotherEndpoint(symbol: string) {
-    const val = await this.cacheManager.get(symbol);
-    return val[0];
-  }
+  // async anotherEndpoint(symbol: string) {
+  //   const val = await this.cacheManager.get(symbol);
+  //   return val[0];
+  // }
 }

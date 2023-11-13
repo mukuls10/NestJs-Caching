@@ -10,8 +10,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('/new/:symbol')
-  async anotherEndpoint(@Param() params: any) {
-    return this.appService.anotherEndpoint(params.symbol);
-  }
+  // @Get('/new/:symbol')
+  // async anotherEndpoint(@Param() params: any) {
+  //   return this.appService.anotherEndpoint(params.symbol);
+  // }
 }
